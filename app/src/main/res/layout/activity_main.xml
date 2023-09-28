@@ -1,55 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="16dp"
+    android:background="@color/result_text_color"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <!-- Результат вычислений -->
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/result_text_color"
+        android:gravity="end"
+        android:padding="26dp"
+        android:text="0"
+        android:textColor="@color/button_pressed_color"
+        android:textSize="@dimen/button_text_size" />
+
+    <!-- Панель с кнопками -->
+    <GridLayout
+        android:id="@+id/buttonPanel"
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp"
-        tools:context=".CalculatorActivity">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resultTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:columnCount="4"
+        android:rowCount="5">
 
-        <!-- Результат вычислений -->
-        <TextView
-            android:id="@+id/resultTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/buttonPanel"
-            android:gravity="end"
-            android:textSize="@dimen/result_text_size"
+        <!-- Пример кнопки -->
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:backgroundTint="@color/text_field_normal_color"
+            android:text="C"
+            app:cornerRadius="0dp"
+            style="@style/buttonstyle"
+            android:textColor="@color/result_text_color" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:backgroundTint="@color/text_field_normal_color"
+            android:text="+/-"
+            app:cornerRadius="0dp"
+            style="@style/buttonstyle"
+            android:textColor="@color/result_text_color" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            app:cornerRadius="0dp"
+            style="@style/buttonstyle"
+            android:backgroundTint="@color/text_field_normal_color"
+            android:text="%"
+            android:textColor="@color/result_text_color" />
+
+        <Button
+            android:id="@+id/button4"
+            style="@style/buttonstyle"
+            android:layout_width="wrap_content"
+            android:backgroundTint="@color/button_pressed_color"
+
+            android:text="/"
             android:textColor="@color/result_text_color"
+            app:cornerRadius="0dp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            app:cornerRadius="0dp"
+            style="@style/buttonstyle"
+            android:backgroundTint="@color/text_field_normal_color"
+            android:text="7"
+            android:textColor="@color/result_text_color" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            app:cornerRadius="0dp"
+            style="@style/buttonstyle"
+            android:backgroundTint="@color/text_field_normal_color"
+            android:text="8"
+            android:textColor="@color/result_text_color" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            app:cornerRadius="0dp"
+            style="@style/buttonstyle"
+            android:backgroundTint="@color/text_field_normal_color"
+            android:text="9"
+            android:textColor="@color/result_text_color" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            app:cornerRadius="0dp"
+            style="@style/buttonstyle"
+            android:backgroundTint="@color/button_pressed_color"
+            android:text="*"
+            android:textColor="@color/result_text_color" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            app:cornerRadius="0dp"
+            style="@style/buttonstyle"
+            android:backgroundTint="@color/text_field_normal_color"
+            android:text="4"
+            android:textColor="@color/result_text_color" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="wrap_content"
+            app:cornerRadius="0dp"
+            style="@style/buttonstyle"
+            android:backgroundTint="@color/text_field_normal_color"
+            android:text="5"
+            android:textColor="@color/result_text_color" />
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="wrap_content"
+            app:cornerRadius="0dp"
+            style="@style/buttonstyle"
+            android:backgroundTint="@color/text_field_normal_color"
+            android:text="6"
+            android:textColor="@color/result_text_color" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="wrap_content"
+            app:cornerRadius="0dp"
+            style="@style/buttonstyle"
+            android:backgroundTint="@color/button_pressed_color"
+            android:text="-"
+            android:textColor="@color/result_text_color" />
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="wrap_content"
+            app:cornerRadius="0dp"
+            style="@style/buttonstyle"
+            android:backgroundTint="@color/text_field_normal_color"
+            android:text="1"
+            android:textColor="@color/result_text_color" />
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="wrap_content"
+            app:cornerRadius="0dp"
+            style="@style/buttonstyle"
+            android:backgroundTint="@color/text_field_normal_color"
+            android:text="2"
+            android:textColor="@color/result_text_color" />
+
+        <Button
+            android:id="@+id/button15"
+            android:layout_width="wrap_content"
+            app:cornerRadius="0dp"
+            style="@style/buttonstyle"
+            android:backgroundTint="@color/text_field_normal_color"
+            android:text="3"
+            android:textColor="@color/result_text_color" />
+
+        <Button
+            android:id="@+id/button16"
+            android:layout_width="wrap_content"
+            app:cornerRadius="0dp"
+            style="@style/buttonstyle"
+            android:backgroundTint="@color/button_pressed_color"
+            android:text="+"
+            android:textColor="@color/result_text_color" />
+
+        <Button
+            android:id="@+id/button17"
+            android:layout_width="wrap_content"
+            app:cornerRadius="0dp"
+            style="@style/buttonstyle"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill"
+            android:backgroundTint="@color/text_field_normal_color"
             android:text="0"
-            android:layout_marginBottom="16dp"/>
+            android:textColor="@color/result_text_color" />
 
-        <!-- Панель с кнопками -->
-        <GridLayout
-            android:id="@+id/buttonPanel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginTop="16dp"
-            android:columnCount="4"
-            android:rowCount="5"
-            android:layout_centerHorizontal="true">
+        <Button
+            android:id="@+id/button18"
+            android:layout_width="wrap_content"
+            app:cornerRadius="0dp"
+            style="@style/buttonstyle"
+            android:backgroundTint="@color/text_field_normal_color"
+            android:text="."
+            android:textColor="@color/result_text_color" />
 
-            <!-- Пример кнопки -->
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1"
-                android:backgroundTint="@color/button_pressed_color"
-                android:textColor="@color/result_text_color" />
+        <Button
+            android:id="@+id/button19"
+            android:layout_width="wrap_content"
+            app:cornerRadius="0dp"
+            style="@style/buttonstyle"
+            android:backgroundTint="@color/button_pressed_color"
+            android:text="="
+            android:textColor="@color/result_text_color" />
+    </GridLayout>
 
+</RelativeLayout>
 
-        </GridLayout>
-
-    </RelativeLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>

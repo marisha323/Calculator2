@@ -8,5 +8,13 @@
         <item name="android:textSize">@dimen/button_text_size</item>
         <item name="android:background">@drawable/button_selector</item>
         <item name="android:textColor">@color/button_text_color</item>
+        <item name="android:gravity">start</item>
+    </style>
+    <style name="buttonstyle">
+
+        <item name="android:layout_height">80dp</item>
+        <item name="android:insetLeft">4dp</item>
+        <item name="android:insetRight">4dp</item>
+
     </style>
 </resources>
